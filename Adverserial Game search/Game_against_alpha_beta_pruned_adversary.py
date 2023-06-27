@@ -141,7 +141,7 @@ def main():
                 press=(False,False,False)
                 x_turn=not x_turn
             if event.type==pygame.KEYDOWN and event.key==pygame.K_p:
-                                if High<=score:
+                                if High<=score and score!=0:
                                     High=score
                                 score=0
                                 POS_X=[]
