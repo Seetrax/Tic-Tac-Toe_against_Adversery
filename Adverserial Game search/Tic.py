@@ -88,20 +88,7 @@ def draw_board(lvl):
 DIRECTION=0
 score_x=0
 score_y=0
-def check_pos(centrex,centrey):
-    turns=[False,False,False,False]
-    ##print(centrex,centrey)
-    num3=39
-    if (centrex)+num3<22*num2:
-        turns[1]=True
-    if (centrex)-num3>0:
-        turns[0]=True
-    if (centrey)+num3<22*num1:
-        turns[3]=True
-    if (centrey)-num3>0:
-        turns[2]=True
-    
-    return turns
+
 x_turn=False
 GameOver=False
 POS_X=[]
