@@ -135,82 +135,17 @@ def main():
                                 x_turn=False
         
         if not GameOver:
-            if (press[0]==1) and (mouse[0]<7*num1 and mouse[0]>2*num1) and (mouse[1]<7*num2 and mouse[1]>2*num2):
-                if arr_x[0]==0 and arr_y[0]==0:
-                    if x_turn:
-                         POS_X.append(1)
-                         arr_x[0]=1
-                    else:
-                         POS_Y.append(1)
-                         arr_y[0]=1
-            if (press[0]==1) and (mouse[0]<13*num1 and mouse[0]>8*num1) and (mouse[1]<7*num2 and mouse[1]>2*num2):
-                if arr_x[1]==0 and arr_y[1]==0:
-                    if x_turn:
-                         POS_X.append(2)
-                         arr_x[1]=1
-                    else:
-                         POS_Y.append(2)
-                         arr_y[1]=1
-            if (press[0]==1) and (mouse[0]<19*num1 and mouse[0]>14*num1) and (mouse[1]<7*num2 and mouse[1]>2*num2):
+            for i in range(9):
+                if (press[0]==1) and (mouse[0]<(7+(i%3)*6)*num1 and mouse[0]>(2+(i%3)*6)*num1) and (mouse[1]<(7+(i//3)*6)*num2 and mouse[1]>(2+(i//3)*6)*num2):
+                    if arr_x[i]==0 and arr_y[i]==0:
+                        
+                        if x_turn:
                 
-                
-                if arr_x[2]==0 and arr_y[2]==0:
-                    if x_turn:
-                         POS_X.append(3)
-                         arr_x[2]=1
-                    else:
-                         POS_Y.append(3)
-                         arr_y[2]=1
-            if (press[0]==1) and (mouse[0]<7*num1 and mouse[0]>2*num1) and (mouse[1]<13*num2 and mouse[1]>8*num2):
-                if arr_x[3]==0 and arr_y[3]==0:
-                    if x_turn:
-                         POS_X.append(4)
-                         arr_x[3]=1
-                    else:
-                         POS_Y.append(4)
-                         arr_y[3]=1
-            if (press[0]==1) and (mouse[0]<13*num1 and mouse[0]>8*num1) and (mouse[1]<13*num2 and mouse[1]>8*num2):
-                if arr_x[4]==0 and arr_y[4]==0:
-                    if x_turn:
-                         POS_X.append(5)
-                         arr_x[4]=1
-                    else:
-                         POS_Y.append(5)
-                         arr_y[4]=1
-            if (press[0]==1) and (mouse[0]<19*num1 and mouse[0]>14*num1) and (mouse[1]<13*num2 and mouse[1]>8*num2):
-                if arr_x[5]==0 and arr_y[5]==0:
-                    if x_turn:
-                         POS_X.append(6)
-                         arr_x[5]=1
-                    else:
-                         POS_Y.append(6)
-                         arr_y[5]=1
-            if (press[0]==1) and (mouse[0]<7*num1 and mouse[0]>2*num1) and (mouse[1]<19*num2 and mouse[1]>14*num2):
-                if arr_x[6]==0 and arr_y[6]==0:
-                    if x_turn:
-                         POS_X.append(7)
-                         arr_x[6]=1
-                    else:
-                         POS_Y.append(7)
-                         arr_y[6]=1
-     
-            if (press[0]==1) and (mouse[0]<13*num1 and mouse[0]>8*num1) and (mouse[1]<19*num2 and mouse[1]>14*num2):
-                if arr_x[7]==0 and arr_y[7]==0:
-                    if x_turn:
-                         POS_X.append(8)
-                         arr_x[7]=1
-                    else:
-                         POS_Y.append(8)
-                         arr_y[7]=1
-
-            if (press[0]==1) and (mouse[0]<19*num1 and mouse[0]>14*num1) and (mouse[1]<19*num2 and mouse[1]>14*num2):
-                if arr_x[8]==0 and arr_y[8]==0:
-                    if x_turn:
-                         POS_X.append(9)
-                         arr_x[8]=1
-                    else:
-                         POS_Y.append(9)
-                         arr_y[8]=1
+                             POS_X.append(i+1)
+                             arr_x[i]=1
+                        else:
+                             POS_Y.append(i+1)
+                             arr_y[i]=1
         if TIME<10:
             if (arr_x[0]==1 and arr_x[1]==1 and arr_x[2]==1) or (arr_x[3]==1 and arr_x[4]==1 and arr_x[5]==1) or (arr_x[6]==1 and arr_x[7]==1 and arr_x[8]==1) or (arr_x[0]==1 and arr_x[3]==1 and arr_x[6]==1) or (arr_x[1]==1 and arr_x[4]==1 and arr_x[7]==1) or (arr_x[2]==1 and arr_x[5]==1 and arr_x[8]==1) or (arr_x[0]==1 and arr_x[4]==1 and arr_x[8]==1) or (arr_x[6]==1 and arr_x[4]==1 and arr_x[2]==1) :
                   if not GameOver:
